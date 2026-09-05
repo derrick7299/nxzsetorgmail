@@ -512,15 +512,7 @@
     document.getElementById('loginForm').reset();
   });
 
-  // ---------- Auto-login kalau sudah pernah login & "ingat saya" aktif ----------
-  (function autoLogin(){
-    const email = getActiveEmail();
-    if(email){
-      const user = getUsers().find(u => u.email === email);
-      if(user){ enterDashboard(user); return; }
-    }
-    showOnly(loginCard);
-  })();
+  if(user){ window.location.href = 'dashboard.html'; return; }
 </script>
 
 </body>
