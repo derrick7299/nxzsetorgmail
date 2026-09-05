@@ -512,7 +512,11 @@
     document.getElementById('loginForm').reset();
   });
 
-  if(user){ window.location.href = 'dashboard.html'; return; }
+  const activeEmail = getActiveEmail();
+
+if (activeEmail) {
+    window.location.href = 'dashboard.html';
+  }
 </script>
 
 </body>
