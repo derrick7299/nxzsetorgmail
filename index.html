@@ -483,7 +483,7 @@
 
     setSession(email, remember);
     showToast('Berhasil masuk. Selamat datang, ' + user.name + '!');
-    enterDashboard(user);
+    window.location.href = 'dashboard.html';
   });
 
   // Simulasi tombol Google (tidak ada backend OAuth sungguhan di file statis ini)
